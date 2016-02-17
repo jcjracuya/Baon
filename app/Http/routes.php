@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/test', 'PagesController@test');
+Route::get('/landingpage', 'PagesController@landingpage');
 
 /*
 |--------------------------------------------------------------------------
