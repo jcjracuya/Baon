@@ -12,6 +12,8 @@
 */
 
 Route::get('/test', 'PagesController@test');
+Route::get('/adminlogin', 'PagesController@adminlogin');
+Route::get('/adminsignup', 'PagesController@adminsignup');
 Route::get('/landingpage', 'PagesController@landingpage');
 
 /*

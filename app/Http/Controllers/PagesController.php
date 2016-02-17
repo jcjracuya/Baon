@@ -14,6 +14,16 @@ class PagesController extends Controller
       return view('pages.test');
     }
 
+    public function adminlogin()
+    {
+      return view('pages.admin-login');
+    }
+
+    public function adminsignup()
+    {
+      return view('pages.admin-signup');
+    }
+
     public function landingpage()
     {
       return view('pages.landingpage');
