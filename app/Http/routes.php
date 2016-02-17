@@ -28,3 +28,9 @@ Route::get('/landingpage', 'PagesController@landingpage');
 Route::group(['middleware' => ['web']], function () {
     //
 });
+
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
+
+    Route::get('/home', 'HomeController@index');
+});

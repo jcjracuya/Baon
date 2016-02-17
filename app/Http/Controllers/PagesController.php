@@ -9,12 +9,12 @@ use App\Http\Controllers\Controller;
 
 class PagesController extends Controller
 {
-    function test()
+    public function test()
     {
       return view('pages.test');
     }
 
-    function landingpage()
+    public function landingpage()
     {
       return view('pages.landingpage');
     }
