@@ -14,9 +14,15 @@
 Route::get('/', 'PagesController@landingpage');
 Route::get('/test', 'PagesController@test');
 Route::get('/adminlogin', 'PagesController@adminlogin');
+Route::post('/adminlogin', 'AdminAuthController@adminLogin');
 Route::get('/adminsignup', 'PagesController@adminsignup');
 Route::post('/adminsignup', 'AdminAuthController@adminRegister');
 Route::get('/editor', 'PagesController@editor');
+Route::get('/admin/home', 'AdminController@index');
+Route::get('/admin/schools', 'AdminController@viewSchools');
+Route::get('/admin/mealpackages', 'AdminController@viewMP');
+Route::get('/admin/school/add', 'AdminController@addSchool');
+Route::get('/admin/mealpackage/add', 'AdminController@addMP');
 
 /*
 |--------------------------------------------------------------------------
