@@ -1,12 +1,12 @@
 @extends('master.master')
-
-
+@section('title', 'Login')
 @section('content')
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-4 col-md-offset-4">
+            <br/><br/><br/>
             <h3>Log In</h3>
-            <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
+            <form class="form-horizontal" role="form" method="POST" action="{{ URL::to('/login') }}">
                 {!! csrf_field() !!}
 
                 <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">

@@ -24,6 +24,9 @@ Route::get('/admin/mealpackages', 'AdminController@viewMP');
 Route::get('/admin/school/add', 'AdminController@addSchool');
 Route::get('/admin/mealpackage/add', 'AdminController@addMP');
 
+Route::get('user/home', 'UserController@home');
+Route::get('user/order', 'UserController@order');
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes

@@ -11,6 +11,7 @@
     <link href="{{ URL::asset('flatui/dist/css/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <link href="{{ URL::asset('flatui/dist/css/flat-ui.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('flatui/dist/css/custom.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('flatui/docs/assets/css/demo.css') }}" rel="stylesheet">
     <link rel="shortcut icon" href="{{ URL::asset('img/favicon.ico') }}">
 
@@ -44,28 +45,29 @@
   </head>
 
   <body>
-    <!-- Static navbar -->
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
           </button>
-          <a class="navbar-brand" href="#">Baon</a>
+          <a class="navbar-brand" href="{{ URL::to('user/home')}}">Baon</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="{{ URL::to('/login')}}">Log In</a></li>
-            <li><a href="{{ URL::to('/register')}}">Register</a></li>
+            <li><a href="{{ URL::to('user/home')}}">Home</a></li>
+            <li><a href="{{ URL::to('user/order') }}">Order</a></li>
+            <li><a href="{{ URL::to('/logout')}}">Log Out</a></li>
            </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
 
-
     <!-- <div class="container"> -->
       @yield('content')
     <!-- </div> -->
+
+    <br><br><br>
 
     <script src="{{ URL::asset('flatui/dist/js/vendor/jquery.min.js') }}"></script>
     <script src="{{ URL::asset('flatui/dist/js/vendor/video.js') }}"></script>
