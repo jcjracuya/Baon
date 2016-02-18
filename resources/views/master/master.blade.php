@@ -13,6 +13,9 @@
     <link href="{{ URL::asset('flatui/dist/css/flat-ui.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('flatui/docs/assets/css/demo.css') }}" rel="stylesheet">
     <link rel="shortcut icon" href="{{ URL::asset('img/favicon.ico') }}">
+
+
+
     <!-- END OF FLAT UI -->
 
     <!-- FLATFY -->
@@ -41,8 +44,30 @@
   </head>
 
   <body>
-    <div class="container">
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-03">
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+        <a class="navbar-brand" href="#">Baon</a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-collapse-03">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#fakelink">Login</a></li>
+          <li><a href="#fakelink">Sign Up</a></li>
+         </ul>
+      </div><!-- /.navbar-collapse -->
+    </nav>
+
+    <!-- <div class="container"> -->
       @yield('content')
-    </div>
+    <!-- </div> -->
+
+    <br><br><br>
+
+    <script src="{{ URL::asset('flatui/dist/js/vendor/jquery.min.js') }}"></script>
+    <script src="{{ URL::asset('flatui/dist/js/vendor/video.js') }}"></script>
+    <script src="{{ URL::asset('flatui/dist/js/flat-ui.min.js') }}"></script>
+    <script src="{{ URL::asset('flatui/docs/assets/js/application.js') }}"></script>
   </body>
 </html>
