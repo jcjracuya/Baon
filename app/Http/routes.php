@@ -11,10 +11,11 @@
 |
 */
 
+Route::get('/', 'PagesController@landingpage');
 Route::get('/test', 'PagesController@test');
 Route::get('/adminlogin', 'PagesController@adminlogin');
 Route::get('/adminsignup', 'PagesController@adminsignup');
-Route::get('/landingpage', 'PagesController@landingpage');
+Route::get('/editor', 'PagesController@editor');
 
 /*
 |--------------------------------------------------------------------------
@@ -34,5 +35,5 @@ Route::group(['middleware' => ['web']], function () {
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
-    Route::get('/home', 'HomeController@index');
+    Route::get('/ome', 'HomeController@index');
 });

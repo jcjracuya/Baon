@@ -24,6 +24,11 @@ class PagesController extends Controller
       return view('pages.admin-signup');
     }
 
+    public function editor()
+    {
+      return view('admin.editor');
+    }
+
     public function landingpage()
     {
       return view('pages.landingpage');

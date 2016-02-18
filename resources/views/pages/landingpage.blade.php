@@ -18,7 +18,7 @@
    <link href="{{ URL::asset('flatfy/css/bootstrap.min.css')}}" rel="stylesheet">
 
    <!-- Custom Google Web Font -->
-   <link href="{{ URL::asset('flatfy/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+   <link href="{{ URL::to('/')}}" rel="stylesheet">
    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
    <link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
 
@@ -48,12 +48,12 @@
  <!-- FullScreen -->
    <div class="intro-header">
    <div class="col-xs-12 text-center abcen1">
-     <h1 class="h1_home wow fadeIn" data-wow-delay="0.4s">Flatfy</h1>
-     <h3 class="h3_home wow fadeIn" data-wow-delay="0.6s">Clean & minimal Theme</h3>
+     <h1 class="h1_home wow fadeIn" data-wow-delay="0.4s">Baon</h1>
+     <h3 class="h3_home wow fadeIn" data-wow-delay="0.6s">Healthy Baon for your kids. </h3>
      <ul class="list-inline intro-social-buttons">
-       <li><a href="https://twitter.com/galantiandrea" class="btn  btn-lg mybutton_cyano wow fadeIn" data-wow-delay="0.8s"><span class="network-name">Twitter</span></a>
+       <li><a href="{{ URL::asset('flatfy/js/modernizr-2.6.2.min.js') }}" class="btn  btn-lg mybutton_cyano wow fadeIn" data-wow-delay="0.8s"><span class="network-name">Log In</span></a>
        </li>
-       <li id="download" ><a href="#downloadlink" class="btn  btn-lg mybutton_standard wow swing wow fadeIn" data-wow-delay="1.2s"><span class="network-name">Free Download</span></a>
+       <li id="download" ><a href="#downloadlink" class="btn  btn-lg mybutton_standard wow swing wow fadeIn" data-wow-delay="1.2s"><span class="network-name">Register</span></a>
        </li>
      </ul>
    </div>
