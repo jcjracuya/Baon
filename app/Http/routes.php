@@ -17,6 +17,8 @@ Route::get('/adminlogin', 'PagesController@adminlogin');
 Route::get('/adminsignup', 'PagesController@adminsignup');
 Route::get('/editor', 'PagesController@editor');
 
+Route::get('/home', 'UserController@home');
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -35,5 +37,5 @@ Route::group(['middleware' => ['web']], function () {
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
-    Route::get('/ome', 'HomeController@index');
+    Route::get('/home', 'HomeController@index');
 });
