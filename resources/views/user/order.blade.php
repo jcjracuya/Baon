@@ -15,6 +15,9 @@
     <div class="panel panel-default">
       <div class="panel panel-body">
         {!! Form::open() !!}
+        <label><b>Name of Child</b></label>
+        {!! Form::text('childname', '', array('class'=>'form-control')) !!}
+        <br/>
         <label><b>Meal Package</b></label>
         <br/>
         <div class="form-group">
@@ -24,18 +27,6 @@
             <option>3</option>
           </select>
         </div>
-
-
-        <label><b>Child</b></label>
-        <br/>
-        <div class="form-group">
-          <select data-toggle="select" class="form-control select select-default">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-          </select>
-        </div>
-
 
         <label><b>Start Date</b></label>
         <br/>

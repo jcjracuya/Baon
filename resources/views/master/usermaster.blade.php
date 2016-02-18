@@ -56,7 +56,13 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="{{ URL::to('user/home')}}">Home</a></li>
-            <li><a href="{{ URL::to('user/order') }}">Order</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Order <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="{{ URL::to('user/order') }}">Add Order</a></li>
+                <li><a href="#">View Orders</a></li>
+              </ul>
+            </li>
             <li><a href="{{ URL::to('/logout')}}">Log Out</a></li>
            </ul>
         </div><!--/.nav-collapse -->
