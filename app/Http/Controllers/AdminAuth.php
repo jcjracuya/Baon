@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 
 class AdminAuth extends Controller
 {
-    puclic function login(Requests $request){
-    	
+    public function login(Requests $request){
+
     }
 }
