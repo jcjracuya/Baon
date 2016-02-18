@@ -1,11 +1,12 @@
 @extends('master.master')
-
+@section('title', 'Register')
 @section('content')
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-4 col-md-offset-4">
+          <br/><br/>
             <h3>Register</h3>
-            <form role="form" method="POST" action="{{ url('/register') }}">
+            <form role="form" method="POST" action="{{ URL::to('/register') }}">
                 {!! csrf_field() !!}
 
                 <div class="form-group{{ $errors->has('lname') ? ' has-error' : '' }}">

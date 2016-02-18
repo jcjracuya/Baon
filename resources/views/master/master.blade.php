@@ -44,26 +44,28 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-inverse" role="navigation">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-03">
-          <span class="sr-only">Toggle navigation</span>
-        </button>
-        <a class="navbar-brand" href="#">Baon</a>
+    <!-- Static navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+          </button>
+          <a class="navbar-brand" href="#">Baon</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="{{ URL::to('/login')}}">Log In</a></li>
+            <li><a href="{{ URL::to('/register')}}">Register</a></li>
+           </ul>
+        </div><!--/.nav-collapse -->
       </div>
-      <div class="collapse navbar-collapse" id="navbar-collapse-03">
-        <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="{{ URL::to('/login')}}">Log In</a></li>
-          <li><a href="{{ URL::to('/register')}}">Register</a></li>
-         </ul>
-      </div><!-- /.navbar-collapse -->
-    </nav>
+    </div>
+
 
     <!-- <div class="container"> -->
       @yield('content')
     <!-- </div> -->
-
-    <br><br><br>
 
     <script src="{{ URL::asset('flatui/dist/js/vendor/jquery.min.js') }}"></script>
     <script src="{{ URL::asset('flatui/dist/js/vendor/video.js') }}"></script>

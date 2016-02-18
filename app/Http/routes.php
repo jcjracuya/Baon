@@ -17,7 +17,8 @@ Route::get('/adminlogin', 'PagesController@adminlogin');
 Route::get('/adminsignup', 'PagesController@adminsignup');
 Route::get('/editor', 'PagesController@editor');
 
-Route::get('/home', 'UserController@home');
+Route::get('user/home', 'UserController@home');
+Route::get('user/order', 'UserController@order');
 
 /*
 |--------------------------------------------------------------------------

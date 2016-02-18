@@ -1,0 +1,22 @@
+.image-header-cover {
+  z-index: 10;
+  position: absolute;
+  margin-top: 20%;
+}
+
+h2.carousel-text {
+  color: #fff;
+}
+
+.carousel-text-container {
+  width: 950px;
+}
+
+.button-order {
+  width: 450px;
+  margin: 0 auto;
+}
+
+img.image-container {
+  width: 100%;
+}

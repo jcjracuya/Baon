@@ -51,9 +51,9 @@
      <h1 class="h1_home wow fadeIn" data-wow-delay="0.4s">Baon</h1>
      <h3 class="h3_home wow fadeIn" data-wow-delay="0.6s">Healthy Baon for your kids. </h3>
      <ul class="list-inline intro-social-buttons">
-       <li><a href="{{ URL::to('/login')}}" class="btn  btn-lg mybutton_cyano wow fadeIn" data-wow-delay="0.8s"><span class="network-name">Log In</span></a>
+       <li><a href="{{ URL::to('/login') }}" class="btn  btn-lg mybutton_cyano wow fadeIn" data-wow-delay="0.8s"><span class="network-name">Log In</span></a>
        </li>
-       <li id="download" ><a href="{{ URL::to('/register')}}" class="btn  btn-lg mybutton_standard wow swing wow fadeIn" data-wow-delay="1.2s"><span class="network-name">Register</span></a>
+       <li id="download" ><a href="{{ URL::to('/register') }}" class="btn  btn-lg mybutton_standard wow swing wow fadeIn" data-wow-delay="1.2s"><span class="network-name">Register</span></a>
        </li>
      </ul>
    </div>
