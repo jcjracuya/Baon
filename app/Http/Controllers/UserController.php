@@ -7,7 +7,10 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+
 use Auth;
+use App\User;
+use App\Order;
 
 class UserController extends Controller
 {
@@ -27,5 +30,10 @@ class UserController extends Controller
     public function order()
     {
       return view('user.order');
+    }
+
+    public function addOrder()
+    {
+
     }
 }

@@ -14,29 +14,31 @@
 
     <div class="panel panel-default">
       <div class="panel panel-body">
-        {!! Form::open() !!}
-        <label><b>Name of Child</b></label>
-        {!! Form::text('childname', '', array('class'=>'form-control')) !!}
-        <br/>
-        <label><b>Meal Package</b></label>
-        <br/>
-        <div class="form-group">
-          <select data-toggle="select" class="form-control select select-default">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-          </select>
-        </div>
+        {!! Form::open(array(
+                        'action' => array('UserController@addOrder'),
+                        'class' => 'form')) !!}
+          <label><b>Name of Child</b></label>
+          {!! Form::text('childname', '', array('class'=>'form-control')) !!}
+          <br/>
+          <label><b>Meal Package</b></label>
+          <br/>
+          <div class="form-group">
+            <select data-toggle="select" class="form-control select select-default">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+            </select>
+          </div>
 
-        <label><b>Start Date</b></label>
-        <br/>
-        {!! Form::date('startdate', date('Y-m-d'), array('class'=>'form-control date')) !!}
-        <br/>
-        {!! Form::checkbox('prepayment', '0', true)!!}&nbsp;Pre-payment
-        <br />
-        {!! Form::checkbox('postpayment', '1')!!}&nbsp;Post-payment
-        <br/><br/>
-        <button type="submit" class="btn btn-primary btn-block">Order</button>
+          <label><b>Start Date</b></label>
+          <br/>
+          {!! Form::date('startdate', date('Y-m-d'), array('class'=>'form-control date')) !!}
+          <br/>
+          {!! Form::checkbox('prepayment', '0', true)!!}&nbsp;Pre-payment
+          <br />
+          {!! Form::checkbox('postpayment', '1')!!}&nbsp;Post-payment
+          <br/><br/>
+          <button type="submit" class="btn btn-primary btn-block">Order</button>
         {!! Form::close() !!}
       </div>
     </div>
