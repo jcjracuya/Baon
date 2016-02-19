@@ -22,7 +22,9 @@ Route::get('/admin/home', 'AdminController@index');
 Route::get('/admin/schools', 'AdminController@viewSchools');
 Route::get('/admin/mealpackages', 'AdminController@viewMP');
 Route::get('/admin/school/add', 'AdminController@addSchool');
+Route::post('/admin/school/add', 'AdminController@storeSchool');
 Route::get('/admin/mealpackage/add', 'AdminController@addMP');
+Route::post('/admin/mealpackage/add', 'AdminController@storeMP');
 
 Route::get('user/home', 'UserController@home');
 Route::get('user/order', 'UserController@order');
