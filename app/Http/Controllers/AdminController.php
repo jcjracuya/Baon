@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Requests\AddSchoolRequest;
 use App\Http\Requests\AddMPRequest;
 use App\Http\Requests\EditMPRequest;
+use App\Http\Requests\EditSchoolRequest;
 use App\Http\Controllers\Controller;
 
 use Auth;
@@ -151,6 +152,55 @@ class AdminController extends Controller
 
         $mp->save();
         return redirect()->action('AdminController@viewMP');
+      }
+      else{
+        return redirect()->action('UserController@home');
+      }
+
+    }
+
+    public function editSchool($id){
+      $user = Auth::user();
+
+      if($user['type'] == 0){
+        $school = School::where('id',$id)->first();
+        return view('admin.edit-school', compact('school'));
+      }
+      else{
+        return redirect()->action('UserController@home');
+      }
+
+    }
+
+    public function updateSchool( $id, EditSchoolRequest $request){
+      $user = Auth::user();
+
+      if($user['type'] == 0){
+        $school = School::where('id',$id)->first();
+
+        $school->name = trim($request->name);
+        $school->addr = trim($request->addr);
+        $school->contactno = trim($request->contactno);
+
+        $school->save();
+        return redirect()->action('AdminController@viewSchools');
+      }
+      else{
+        return redirect()->action('UserController@home');
+      }
+
+    }
+
+    public function deleteSchool($id){
+      $user = Auth::user();
+
+      if($user['type'] == 0){
+        $s = School::where('id',$id)->first();
+
+        $s->status = 0;
+
+        $s->save();
+        return redirect()->action('AdminController@viewSchools');
       }
       else{
         return redirect()->action('UserController@home');

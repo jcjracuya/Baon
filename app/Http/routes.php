@@ -70,5 +70,8 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/admin/mealpackage/edit/{id?}', 'AdminController@editMP');
     Route::post('/admin/mealpackage/edit/{id?}', 'AdminController@updateMP');
     Route::get('/admin/mealpackage/delete/{id?}', 'AdminController@deleteMP');
+    Route::get('/admin/school/edit/{id?}', 'AdminController@editSchool');
+    Route::post('/admin/school/edit/{id?}', 'AdminController@updateSchool');
+    Route::get('/admin/school/delete/{id?}', 'AdminController@deleteSchool');
 
 });
