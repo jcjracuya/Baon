@@ -31,13 +31,17 @@ class AdminController extends Controller
     public function viewSchools(){
 
       $schools = School::where('status', '1')
-                        ->orderBy('name', 'desc')
+                        ->orderBy('name')
                         ->get();
     	return view('admin.view-schools', compact('schools'));
     }
 
     public function viewMP(){
-    	return view('admin.view-mp');
+
+      $mp = MealPackage::where('status', 1)
+                          ->orderBy('name')
+                          ->get();
+    	return view('admin.view-mp', compact('mp'));
     }
 
     public function addSchool(){
@@ -96,7 +100,7 @@ class AdminController extends Controller
           'price' => trim($request->price),
           'status' => 1,
         ]);
-        return view('admin.add-mp');
+        return redirect()->action('AdminController@viewMP');
       }
       else{
         return redirect()->action('UserController@home');

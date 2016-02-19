@@ -17,6 +17,7 @@
 	                      'class'=>'form-control',
 	                      'placeholder'=>'Meal Package Title')) !!}
 	        <br/>
+
 	        {!! Form::textarea('details', null,
 	                      array('required',
 	                      'class'=>'form-control',
