@@ -29,16 +29,19 @@
   <div class="row">
     <div class="col-md-12">
       <div class="row">
+
+        @foreach($mpackage as $mp)
         <div class="col-md-4">
           <div class="tile">
             <img src="{{ URL::asset('flatui/img/icons/icon1.png') }}" class="tile-image big-illustration">
-            <h3 class="tile-title">Package 1</h3>
-            <p>Silog</p>
-            <a class="btn btn-primary btn-large btn-block" href="#">Details</a>
+            <h3 class="tile-title">{{ $mp['name'] }}</h3>
+            <p>P {{ $mp['price'] }}</p>
+            <a class="btn btn-primary btn-large btn-block" href="{!! action('UserController@getSpecificPackage', $mp['id']) !!}">Details</a>
           </div>
         </div>
+        @endforeach
 
-        <div class="col-md-4">
+        <!-- <div class="col-md-4">
           <div class="tile">
             <img src="{{ URL::asset('flatui/img/icons/icon2.png') }}" class="tile-image big-illustration">
             <h3 class="tile-title">Package 2</h3>
@@ -54,7 +57,8 @@
             <p>Go, Grow, & Glow</p>
             <a class="btn btn-primary btn-large btn-block" href="#">Details</a>
           </div>
-        </div>
+        </div> -->
+
       </div>
     </div>
 

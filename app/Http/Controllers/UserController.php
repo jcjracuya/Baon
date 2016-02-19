@@ -79,4 +79,32 @@ class UserController extends Controller
         return redirect()->action('AdminController@index');
       }
     }
+
+    public function getMealPackage()
+    {
+      $user = Auth::user();
+
+      if($user['type'] == 1){
+        $mpackage = MealPackage::where('status', '=', 1)->get();
+
+        return view('user.home', compact('user', 'mpackage'));
+      }
+      else{
+        return redirect()->action('AdminController@index');
+      }
+    }
+
+    public function getSpecificPackage($id)
+    {
+      $user = Auth::user();
+
+      if($user['type'] == 1){
+        $mpackage = MealPackage::where('id', '=', $id)->where('status', '=', 1)->get();
+
+        return view('user.package', compact('user', 'mpackage'));
+      }
+      else{
+        return redirect()->action('AdminController@index');
+      }
+    }
 }

@@ -56,6 +56,9 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/home', 'HomeController@index');
 
     Route::get('user/home', 'UserController@home');
+    Route::get('user/home', 'UserController@getMealPackage');
+    Route::get('user/mealpackage/{id?}', 'UserController@getSpecificPackage');
+
     Route::get('user/order', 'UserController@order');
     Route::post('user/order/add', 'UserController@addOrder');
     Route::get('user/order/view', 'UserController@viewOrders');
