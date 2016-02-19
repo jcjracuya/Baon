@@ -55,7 +55,7 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="{{ URL::to('/login')}}">Log In</a></li>
+            <li><a href="{{ URL::to('/login')}}">Log In</a></li>
             <li><a href="{{ URL::to('/register')}}">Register</a></li>
            </ul>
         </div><!--/.nav-collapse -->
