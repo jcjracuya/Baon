@@ -11,7 +11,7 @@
    <meta name="description" content="Flatfy Free Flat and Responsive HTML5 Template ">
    <meta name="author" content="">
 
-   <title>Flatfy – Free Flat and Responsive HTML5 Template</title>
+   <title>Baon</title>
 
    <!-- FLATFY -->
    <!-- Bootstrap core CSS -->
@@ -49,7 +49,7 @@
    <div class="intro-header">
    <div class="col-xs-12 text-center abcen1">
      <h1 class="h1_home wow fadeIn" data-wow-delay="0.4s">Baon</h1>
-     <h3 class="h3_home wow fadeIn" data-wow-delay="0.6s">Healthy Baon for your kids. </h3>
+     <h3 class="h3_home wow fadeIn" data-wow-delay="0.6s">Healthy and Delicous Lunch Food <br> Delivered to your Child. </h3>
      <ul class="list-inline intro-social-buttons">
        <li><a href="{{ URL::to('/login') }}" class="btn  btn-lg mybutton_cyano wow fadeIn" data-wow-delay="0.8s"><span class="network-name">Log In</span></a>
        </li>
@@ -60,7 +60,7 @@
        <!-- /.container -->
    <div class="col-xs-12 text-center abcen wow fadeIn">
      <div class="button_down ">
-       <a class="imgcircle wow bounceInUp" data-wow-duration="1.5s"  href="#whatis"> <img class="img_scroll" src="img/icon/circle.png" alt=""> </a>
+       <a class="imgcircle wow bounceInUp" data-wow-duration="1.5s"  href="#whatis"> <img class="img_scroll" src="{{ URL::asset('flatfy/img/icon/circle.png')}}" alt=""> </a>
      </div>
    </div>
    </div>
@@ -75,17 +75,15 @@
          <span class="icon-bar"></span>
          <span class="icon-bar"></span>
        </button>
-       <a class="navbar-brand" href="#home">Flatfy</a>
+       <a class="navbar-brand" href="#home">Baon</a>
      </div>
 
      <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
        <ul class="nav navbar-nav">
 
-         <li class="menuItem"><a href="#whatis">What is?</a></li>
-         <li class="menuItem"><a href="#useit">Use It</a></li>
-         <li class="menuItem"><a href="#screen">Screenshot</a></li>
-         <li class="menuItem"><a href="#credits">Credits</a></li>
-         <li class="menuItem"><a href="#contact">Contact</a></li>
+         <li class="menuItem"><a href="#whatis">Features</a></li>
+         <li class="menuItem"><a href="#useit">The Problem</a></li>
+         <li class="menuItem"><a href="#solution">Our Solution</a></li>
        </ul>
      </div>
 
@@ -97,61 +95,61 @@
    <div class="container">
 
      <div class="col-md-6 col-md-offset-3 text-center wrap_title">
-       <h2>What is?</h2>
-       <p class="lead" style="margin-top:0">A special thanks to Death.</p>
+       <h2>Features</h2>
+       <!-- <p class="lead" style="margin-top:0">A special thanks to Death.</p> -->
 
      </div>
 
      <div class="row">
 
        <div class="col-sm-4 wow fadeInDown text-center">
-         <img class="rotate" src="img/icon/tweet.svg" alt="Generic placeholder image">
-         <h3>Follow Me</h3>
-         <p class="lead">Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. </p>
+         <img class="rotate" src="{{URL::asset('flatfy/img/icon/icon1.png') }}" alt="Generic placeholder image" width="100">
+         <h3>Meal Packages</h3>
+         <p class="lead">Variety of meal packages that inlcudes delicious and healthy lunch food for your child.</p>
 
          <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
        </div><!-- /.col-lg-4 -->
 
        <div class="col-sm-4 wow fadeInDown text-center">
-         <img  class="rotate" src="img/icon/picture.svg" alt="Generic placeholder image">
-          <h3>Gallery</h3>
-          <p class="lead">Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. </p>
+         <img  class="rotate" src="{{URL::asset('flatfy/img/icon/shopping bag.svg') }}" alt="Generic placeholder image">
+          <h3>Order</h3>
+          <p class="lead">Hassle free ordering system for the meal package of your choice.</p>
           <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
        </div><!-- /.col-lg-4 -->
 
        <div class="col-sm-4 wow fadeInDown text-center">
-         <img  class="rotate" src="img/icon/retina.svg" alt="Generic placeholder image">
-          <h3>Retina</h3>
-         <p class="lead">Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. </p>
+         <img  class="rotate" src="{{URL::asset('flatfy/img/icon/map.svg') }}" alt="Generic placeholder image">
+          <h3>Delivery</h3>
+         <p class="lead">On time delivery to affiliated schools. You can trust us to deliver the meals on time for lunch.</p>
          <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
        </div><!-- /.col-lg-4 -->
 
      </div><!-- /.row -->
 
-     <div class="row tworow">
+     <!-- <div class="row tworow">
 
        <div class="col-sm-4  wow fadeInDown text-center">
-         <img class="rotate" src="img/icon/laptop.svg" alt="Generic placeholder image">
+         <img class="rotate" src="{{URL::asset('flatfy/img/icon/laptop.svg') }}" alt="Generic placeholder image">
          <h3>Responsive</h3>
          <p class="lead">Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. </p>
-        <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
-       </div><!-- /.col-lg-4 -->
+        <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p>
+       </div>
 
        <div class="col-sm-4 wow fadeInDown text-center">
-         <img  class="rotate" src="img/icon/map.svg" alt="Generic placeholder image">
+         <img  class="rotate" src="{{URL::asset('flatfy/img/icon/map.svg') }}" alt="Generic placeholder image">
           <h3>Google</h3>
           <p class="lead">Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. </p>
-          <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
-       </div><!-- /.col-lg-4 -->
+          <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p>
+       </div>
 
        <div class="col-sm-4 wow fadeInDown text-center">
-         <img  class="rotate" src="img/icon/browser.svg" alt="Generic placeholder image">
+         <img  class="rotate" src="{{URL::asset('flatfy/img/icon/browser.svg') }}" alt="Generic placeholder image">
           <h3>Bootstrap</h3>
         <p class="lead">Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. </p>
-         <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
-       </div><!-- /.col-lg-4 -->
+         <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p>
+       </div>
 
-     </div><!-- /.row -->
+     </div> -->
    </div>
  </div>
 
@@ -163,28 +161,27 @@
            <div class="row">
 
        <div class="col-sm-6 pull-right wow fadeInRightBig">
-                   <img class="img-responsive " src="img/ipad.png" alt="">
+                   <img class="img-responsive " src="{{URL::asset('flatfy/img/bg3.jpg') }}" alt="">
                </div>
 
                <div class="col-sm-6 wow fadeInLeftBig"  data-animation-delay="200">
-                   <h3 class="section-heading">Full Responsive</h3>
-         <div class="sub-title lead3">Lorem ipsum dolor sit atmet sit dolor greand fdanrh<br> sdfs sit atmet sit dolor greand fdanrh sdfs</div>
+                   <h3 class="section-heading">The Problem</h3>
+         <div class="sub-title lead3"><h4>One of the main concerns of mothers is what <br>their child/children will eat at school.</h4></div>
                    <p class="lead">
-           In his igitur partibus duabus nihil erat, quod Zeno commuta rest gestiret.
-           Sed virtutem ipsam inchoavit, nihil ampliusuma. Scien tiam pollicentur,
-           uam non erat mirum sapientiae lorem cupido
-           patria esse cariorem. Quae qui non vident, nihilamane umquam magnum ac cognitione.
+           For working moms, this also leads to additional problems because of their work schedule. Mornings can get very hectic because everyone is rushing to where they have to be. There could be times when they wont be able to prepare lunch food and either send the food to their child's school of just let them buy at the canteen. For the former, they either need to make time from work or ask someone to bring it to their child. The latter carries its own problem because no might be available to do it for them.
+
+           Kaluoy sa bata. Gutumon.
          </p>
 
-          <p><a class="btn btn-embossed btn-primary" href="#" role="button">View Details</a>
-          <a class="btn btn-embossed btn-info" href="#" role="button">Visit Website</a></p>
+          <!-- <p><a class="btn btn-embossed btn-primary" href="#" role="button">View Details</a>
+          <a class="btn btn-embossed btn-info" href="#" role="button">Visit Website</a></p> -->
        </div>
            </div>
        </div>
        <!-- /.container -->
    </div>
 
-   <div class="content-section-b">
+   <!-- <div class="content-section-b">
 
    <div class="container">
            <div class="row">
@@ -192,17 +189,17 @@
                     <div id="owl-demo-1" class="owl-carousel">
            <a href="img/iphone.png" class="image-link">
              <div class="item">
-               <img  class="img-responsive img-rounded" src="img/iphone.png" alt="">
+               <img  class="img-responsive img-rounded" src="{{URL::asset('flatfy/img/iphone.png') }}" alt="">
              </div>
            </a>
            <a href="img/iphone.png" class="image-link">
              <div class="item">
-               <img  class="img-responsive img-rounded" src="img/iphone.png" alt="">
+               <img  class="img-responsive img-rounded" src="{{URL::asset('flatfy/img/iphone.png') }}" alt="">
              </div>
            </a>
            <a href="img/iphone.png" class="image-link">
              <div class="item">
-               <img  class="img-responsive img-rounded" src="img/iphone.png" alt="">
+               <img  class="img-responsive img-rounded" src="{{URL::asset('flatfy/img/iphone.png') }}" alt="">
              </div>
            </a>
          </div>
@@ -223,28 +220,28 @@
        </div>
      </div>
        </div>
-   </div>
+   </div> -->
 
-   <div class="content-section-a">
+   <div id ="solution" class="content-section-a">
 
        <div class="container">
 
             <div class="row">
 
-       <div class="col-sm-6 pull-right wow fadeInRightBig">
-                   <img class="img-responsive " src="img/doge.png" alt="">
+       <div class="col-sm-6 pull-left wow fadeInLeftBig">
+                   <img class="img-responsive " src="{{URL::asset('flatfy/img/bg4.jpg') }}" alt="">
                </div>
 
-               <div class="col-sm-6 wow fadeInLeftBig"  data-animation-delay="200">
-                   <h3 class="section-heading">Font Awesome & Glyphicon</h3>
-                   <p class="lead">A special thanks to Death to the Stock Photo for
-         providing the photographs that you see in this template.
-         </p>
+               <div class="col-sm-6 wow fadeInRightBig"  data-animation-delay="200">
+                   <h3 class="section-heading">The Solution</h3>
+                   <p class="lead">
+                     Baon: Order Meal Packages Online
+                   </p>
 
          <ul class="descp lead2">
-           <li><i class="glyphicon glyphicon-signal"></i> Reliable and Secure Platform</li>
-           <li><i class="glyphicon glyphicon-refresh"></i> Everything is perfectly orgainized for future</li>
-           <li><i class="glyphicon glyphicon-headphones"></i> Attach large file easily</li>
+           <li><i class="glyphicon glyphicon-cutlery"></i> No need to worry on what to prepare. </li>
+           <li><i class="glyphicon glyphicon-thumbs-up"></i> Delivery to the child's school is covered.</li>
+           <li><i class="glyphicon glyphicon-calendar"></i> Empowers you to take control of your schedule and plan your budget.</li>
          </ul>
        </div>
            </div>
@@ -253,7 +250,7 @@
    </div>
 
  <!-- Screenshot -->
- <div id="screen" class="content-section-b">
+ <!-- <div id="screen" class="content-section-b">
        <div class="container">
          <div class="row" >
       <div class="col-md-6 col-md-offset-3 text-center wrap_title ">
@@ -266,37 +263,37 @@
 
        <a href="img/slide/1.png" class="image-link">
          <div class="item">
-           <img  class="img-responsive img-rounded" src="img/slide/1.png" alt="Owl Image">
+           <img  class="img-responsive img-rounded" src="{{URL::asset('flatfy/img/slide/1.png') }}" alt="Owl Image">
          </div>
        </a>
 
               <a href="img/slide/2.png" class="image-link">
          <div class="item">
-           <img  class="img-responsive img-rounded" src="img/slide/2.png" alt="Owl Image">
+           <img  class="img-responsive img-rounded" src="{{URL::asset('flatfy/img/slide/2.png') }}" alt="Owl Image">
          </div>
        </a>
 
        <a href="img/slide/3.png" class="image-link">
          <div class="item">
-           <img  class="img-responsive img-rounded" src="img/slide/3.png" alt="Owl Image">
+           <img  class="img-responsive img-rounded" src="{{URL::asset('flatfy/img/slide/3.png') }}" alt="Owl Image">
          </div>
        </a>
 
        <a href="img/slide/1.png" class="image-link">
          <div class="item">
-           <img  class="img-responsive img-rounded" src="img/slide/1.png" alt="Owl Image">
+           <img  class="img-responsive img-rounded" src="{{URL::asset('flatfy/img/slide/1.png') }}" alt="Owl Image">
          </div>
        </a>
 
               <a href="img/slide/2.png" class="image-link">
          <div class="item">
-           <img  class="img-responsive img-rounded" src="img/slide/2.png" alt="Owl Image">
+           <img  class="img-responsive img-rounded" src="{{URL::asset('flatfy/img/slide/2.png') }}" alt="Owl Image">
          </div>
        </a>
 
        <a href="img/slide/3.png" class="image-link">
          <div class="item">
-           <img  class="img-responsive img-rounded" src="img/slide/3.png" alt="Owl Image">
+           <img  class="img-responsive img-rounded" src="{{URL::asset('flatfy/img/slide/3.png') }}" alt="Owl Image">
          </div>
        </a>
              </div>
@@ -304,37 +301,11 @@
        </div>
 
 
- </div>
+ </div> -->
 
- <div  class="content-section-c ">
-   <div class="container">
-     <div class="row">
-     <div class="col-md-6 col-md-offset-3 text-center wrap_title white">
-       <h2>Get Live Updates</h2>
-       <p class="lead" style="margin-top:0">A special thanks to Death.</p>
-      </div>
-     <div class="mockup-content">
-         <div class="morph-button wow pulse morph-button-inflow morph-button-inflow-1">
-           <button type="button "><span>Subscribe to our Newsletter</span></button>
-           <div class="morph-content">
-             <div>
-               <div class="content-style-form content-style-form-4 ">
-                 <h2 class="morph-clone">Subscribe to our Newsletter</h2>
-                 <form>
-                   <p><label>Your Email Address</label><input type="text"/></p>
-                   <p><button>Subscribe me</button></p>
-                 </form>
-               </div>
-             </div>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
- </div>
 
  <!-- Credits -->
- <div id="credits" class="content-section-a">
+ <!-- <div id="credits" class="content-section-a">
    <div class="container">
      <div class="row">
 
@@ -392,23 +363,25 @@
        </div>
      </div>
    </div>
- </div>
+ </div> -->
 
  <!-- Banner Download -->
  <div id="downloadlink" class="banner">
    <div class="container">
      <div class="row">
        <div class="col-md-6 col-md-offset-3 text-center wrap_title">
-       <h2>Download Free</h2>
-       <p class="lead" style="margin-top:0">Pay with a Tweet</p>
-       <p><a class="btn btn-embossed btn-primary view" role="button">Free Download</a></p>
+       <h2>Register for Free</h2>
+       <p>
+         <a href="{{ URL::to('/login') }}" class="btn btn-embossed btn-primary view" >Log In</a>
+         <a href="{{ URL::to('/register') }}" class="btn btn-embossed btn-default view" >Register for Free</a>
+       </p>
       </div>
      </div>
    </div>
  </div>
 
  <!-- Contact -->
- <div id="contact" class="content-section-a">
+ <!-- <div id="contact" class="content-section-a">
    <div class="container">
      <div class="row">
 
@@ -467,11 +440,11 @@
        </div>
      </div>
    </div>
- </div>
+ </div> -->
 
 
 
-   <footer>
+   <!-- <footer>
      <div class="container">
        <div class="row">
          <div class="col-md-7">
@@ -479,10 +452,10 @@
            <p>Vuoi ricevere news su altri template?<br/>
              Visita Andrea Galanti.it e vedrai tutte le news riguardanti nuovi Theme!<br/>
              Go to: <a  href="http://andreagalanti.it" target="_blank">andreagalanti.it</a>
-           </p>
+           </p> -->
 
      <!-- LICENSE -->
-     <a rel="cc:attributionURL" href="http://www.andreagalanti.it/flatfy"
+     <!-- <a rel="cc:attributionURL" href="http://www.andreagalanti.it/flatfy"
       property="dc:title">Flatfy Theme </a> by
       <a rel="dc:creator" href="http://www.andreagalanti.it"
       property="cc:attributionName">Andrea Galanti</a>
@@ -492,9 +465,10 @@
       Commons Attribution 3.0 License - NOT COMMERCIAL</a>.
 
 
-         </div> <!-- /col-xs-7 -->
+         </div>  -->
+         <!-- /col-xs-7 -->
 
-         <div class="col-md-5">
+         <!-- <div class="col-md-5">
            <div class="footer-banner">
              <h3 class="footer-title">Flatfy Theme</h3>
              <ul>
@@ -509,7 +483,7 @@
          </div>
        </div>
      </div>
-   </footer>
+   </footer> -->
 
    <!-- JavaScript -->
    <script src="{{ URL::asset('flatfy/js/jquery-1.10.2.js') }}"></script>

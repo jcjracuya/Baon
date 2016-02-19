@@ -16,15 +16,15 @@
 			@foreach($schools as $s)
 
 				<tr>
-					<td><b>{{ $s->name }}</b></td>
-					<td>{{ $s->addr}}</td>
-					<td>{{ $s->contactno}}</td>
-					<td>{{ $s->status == 1 ? 'Active' : 'Inactive' }}</td>
+					<td><b>{{ $s['name'] }}</b></td>
+					<td>{{ $s['addr']}}</td>
+					<td>{{ $s['contactno']}}</td>
+					<td>{{ $s['status'] == 1 ? 'Active' : 'Inactive' }}</td>
 					<td>
 									<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-									<a href="{{ action('AdminController@editSchool', $s->id) }}" class="btn btn-primary">Edit</a>
+									<a href="{{ action('AdminController@editSchool', $s['id']) }}" class="btn btn-primary">Edit</a>
 									<!-- Standard gray button with gradient -->
-									<a href="{{ action('AdminController@deleteSchool', $s->id) }}" class="btn btn-default">Delete</a>
+									<a href="{{ action('AdminController@deleteSchool', $s['id']) }}" class="btn btn-default">Delete</a>
 					</td>
 				</tr>
 
