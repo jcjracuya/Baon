@@ -105,7 +105,7 @@
        <div class="col-sm-4 wow fadeInDown text-center">
          <img class="rotate" src="{{URL::asset('flatfy/img/icon/icon1.png') }}" alt="Generic placeholder image" width="100">
          <h3>Meal Packages</h3>
-         <p class="lead">Variety of meal packages that inlcudes delicious and healhty lunch food for your child.</p>
+         <p class="lead">Variety of meal packages that inlcudes delicious and healthy lunch food for your child.</p>
 
          <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
        </div><!-- /.col-lg-4 -->
