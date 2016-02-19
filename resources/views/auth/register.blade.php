@@ -35,6 +35,19 @@
 
                 </div>
 
+                <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
+
+
+                        <input type="text" class="form-control" name="username" value="{{ old('username') }}" placeholder="Username">
+
+                        @if ($errors->has('username'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('username') }}</strong>
+                            </span>
+                        @endif
+
+                </div>
+
                 <div class="form-group{{ $errors->has('addr') ? 'has-error' : '' }}">
 
 

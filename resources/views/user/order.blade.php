@@ -32,8 +32,10 @@
         <br/>
         {!! Form::date('startdate', date('Y-m-d'), array('class'=>'form-control date')) !!}
         <br/>
-        {!! Form::radio('prepayment' 1, true, array('class'=>'form-control')) !!}
-        <br/>
+        {!! Form::checkbox('prepayment', '0', true)!!}&nbsp;Pre-payment
+        <br />
+        {!! Form::checkbox('postpayment', '1')!!}&nbsp;Post-payment
+        <br/><br/>
         <button type="submit" class="btn btn-primary btn-block">Order</button>
         {!! Form::close() !!}
       </div>

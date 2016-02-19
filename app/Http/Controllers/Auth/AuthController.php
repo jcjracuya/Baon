@@ -53,7 +53,9 @@ class AuthController extends Controller
             'lname' => 'required|max:255',
             'addr'  => 'required|max:255',
             'contactno' => 'required|max:255',
+            'username'  => 'required|max:255',
             'status'    => '',
+            'type'      => '',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|confirmed|min:6',
         ]);
@@ -72,6 +74,8 @@ class AuthController extends Controller
             'fname' => $data['fname'],
             'addr'  => $data['addr'],
             'contactno' => $data['contactno'],
+            'username'  => $data['username'],
+            'type'      => '1',
             'status'    => '1',
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
