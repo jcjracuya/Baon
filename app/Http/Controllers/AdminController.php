@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Requests\AddSchoolRequest;
 use App\Http\Requests\AddMPRequest;
+use App\Http\Requests\EditMPRequest;
 use App\Http\Controllers\Controller;
 
 use Auth;
@@ -100,6 +101,55 @@ class AdminController extends Controller
           'price' => trim($request->price),
           'status' => 1,
         ]);
+        return redirect()->action('AdminController@viewMP');
+      }
+      else{
+        return redirect()->action('UserController@home');
+      }
+
+    }
+
+    public function editMP($id){
+      $user = Auth::user();
+
+      if($user['type'] == 0){
+        $mp = MealPackage::where('id',$id)->first();
+        return view('admin.edit-mp', compact('mp'));
+      }
+      else{
+        return redirect()->action('UserController@home');
+      }
+
+    }
+
+    public function updateMP( $id, EditMPRequest $request){
+      $user = Auth::user();
+
+      if($user['type'] == 0){
+        $mp = MealPackage::where('id',$id)->first();
+
+        $mp->name = trim($request->name);
+        $mp->details = trim($request->details);
+        $mp->price = trim($request->price);
+
+        $mp->save();
+        return redirect()->action('AdminController@viewMP');
+      }
+      else{
+        return redirect()->action('UserController@home');
+      }
+
+    }
+
+    public function deleteMP($id){
+      $user = Auth::user();
+
+      if($user['type'] == 0){
+        $mp = MealPackage::where('id',$id)->first();
+
+        $mp->status = 0;
+
+        $mp->save();
         return redirect()->action('AdminController@viewMP');
       }
       else{

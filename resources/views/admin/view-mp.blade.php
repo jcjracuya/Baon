@@ -15,9 +15,9 @@
 			</div>
 			<div class="panel-footer">
 				<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-					<button type="button" class="btn btn-primary">Edit</button>
+					<a href="{{ action('AdminController@editMP', $mp->id)}}" class="btn btn-primary">Edit</a>
 					<!-- Standard gray button with gradient -->
-					<button type="button" class="btn btn-default">Delete</button>
+					<a href="{{ action('AdminController@deleteMP', $mp->id)}}" class="btn btn-default">Delete</a>
 			</div>
 		</div>
 	@endforeach

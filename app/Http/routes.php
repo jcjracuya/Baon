@@ -25,6 +25,9 @@ Route::get('/admin/school/add', 'AdminController@addSchool');
 Route::post('/admin/school/add', 'AdminController@storeSchool');
 Route::get('/admin/mealpackage/add', 'AdminController@addMP');
 Route::post('/admin/mealpackage/add', 'AdminController@storeMP');
+Route::get('/admin/mealpackage/edit/{id?}', 'AdminController@editMP');
+Route::post('/admin/mealpackage/edit/{id?}', 'AdminController@updateMP');
+Route::get('/admin/mealpackage/delete/{id?}', 'AdminController@deleteMP');
 
 Route::get('user/home', 'UserController@home');
 Route::get('user/order', 'UserController@order');
