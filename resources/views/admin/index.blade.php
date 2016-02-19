@@ -17,50 +17,19 @@
 		</thead>
 
 		<tbody class="">
-			<tr>
-				<td><a href="">asdfasdf</a></td>
-				<td>asdfasdf</td>
-				<td>asdfasdf</td>
-				<td>asdfasdf</td>
-				<td>asdfasdf</td>						
-				<td>asdfasdf</td>						
-				<td>asdfasdf</td>						
-				<td>asdfasdf</td>						
-			</tr>
+			@foreach($orders as $o)
+				<tr>
+					<td><a href="{!! action('AdminController@updateOrder', $o['id']) !!}">{{$o['id']}}</a></td>
+					<td>{{$o->user['lname']}}, {{$o->user['fname']}}</td>
+					<td>{{ $o->mealpackages['name']}}</td>
+					<td>{{ $o['childname']}}</td>
+					<td>{{ $o['prepayment'] }}</td>
+					<td>{{ $o['postpayment'] }}</td>
+					<td>{{ date('F d, Y', strtotime($o['created_at'])) }}</td>
+					<td>{{ $o['status']}}</td>
+				</tr>
+			@endforeach
 
-			<tr>
-				<td><a href="">asdfasdf</a></td>
-				<td>asdfasdf</td>
-				<td>asdfasdf</td>
-				<td>asdfasdf</td>
-				<td>asdfasdf</td>						
-				<td>asdfasdf</td>						
-				<td>asdfasdf</td>						
-				<td>asdfasdf</td>						
-			</tr>
-
-			<tr>
-				<td><a href="">asdfasdf</a></td>
-				<td>asdfasdf</td>
-				<td>asdfasdf</td>
-				<td>asdfasdf</td>
-				<td>asdfasdf</td>						
-				<td>asdfasdf</td>						
-				<td>asdfasdf</td>						
-				<td>asdfasdf</td>					
-			</tr>
-
-			<tr>
-				<td><a href="">asdfasdf</a></td>
-				<td>asdfasdf</td>
-				<td>asdfasdf</td>
-				<td>asdfasdf</td>
-				<td>asdfasdf</td>						
-				<td>asdfasdf</td>						
-				<td>asdfasdf</td>						
-				<td>asdfasdf</td>							
-			</tr>
-			
 		</tbody>
 	</table>
 </div>

@@ -63,6 +63,8 @@ Route::group(['middleware' => 'web'], function () {
     Route::post('user/order/add', 'UserController@addOrder');
     Route::get('user/order/view', 'UserController@viewOrders');
 
+
+
     Route::get('/admin/home', 'AdminController@index');
     Route::get('/admin/schools', 'AdminController@viewSchools');
     Route::get('/admin/mealpackages', 'AdminController@viewMP');
@@ -76,5 +78,9 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/admin/school/edit/{id?}', 'AdminController@editSchool');
     Route::post('/admin/school/edit/{id?}', 'AdminController@updateSchool');
     Route::get('/admin/school/delete/{id?}', 'AdminController@deleteSchool');
+    Route::get('user/order/update/{id?}', 'AdminController@updateOrder');
+    Route::get('user/order/prepayment/{id?}', 'AdminController@updatePrePayment');
+    Route::get('user/order/postpayment/{id?}', 'AdminController@updatePostPayment');
+
 
 });

@@ -26,4 +26,9 @@ class Order extends Model
   {
       return $this->hasOne('App\MealPackage', 'id', 'mpid');
   }
+
+  public function user()
+  {
+      return $this->hasOne('App\User', 'id', 'userid');
+  }
 }

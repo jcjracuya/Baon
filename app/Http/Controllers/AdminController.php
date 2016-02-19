@@ -14,6 +14,7 @@ use App\Http\Controllers\Controller;
 use Auth;
 use App\User;
 use App\School;
+use App\Order;
 use App\MealPackage;
 
 class AdminController extends Controller
@@ -22,7 +23,10 @@ class AdminController extends Controller
       $user = Auth::user();
 
       if($user['type'] == 0){
-        return view('admin.index');
+        $orders = Order::with('mealpackages', 'user')->get();
+        // dd($orders);
+
+        return view('admin.index', compact('orders'));
       }
       else{
         return redirect()->action('UserController@home');
@@ -206,5 +210,55 @@ class AdminController extends Controller
         return redirect()->action('UserController@home');
       }
 
+    }
+
+    public function updateOrder($id){
+      $user = Auth::user();
+
+      if($user['type'] == 0){
+        $o = Order::with('mealpackages', 'user')->where('id', '=', $id)->first();
+        // dd($orders);
+
+        return view('admin.edit-order', compact('o'));
+      }
+      else{
+        return redirect()->action('UserController@home');
+      }
+
+    }
+
+    public function updatePrePayment($id)
+    {
+      $user = Auth::user();
+
+      if($user['type'] == 0){
+        $o = Order::with('mealpackages', 'user')->where('id', '=', $id)->first();
+        $o->prepayment = 1;
+
+        $o->save();
+
+          return redirect()->action('AdminController@index');
+      }
+      else{
+        return redirect()->action('UserController@home');
+      }
+    }
+
+    public function updatePostPayment($id)
+    {
+      $user = Auth::user();
+
+      if($user['type'] == 0){
+        $o = Order::with('mealpackages', 'user')->where('id', '=', $id)->first();
+
+        $o->postpayment = 1;
+
+        $o->save();
+
+        return redirect()->action('AdminController@index');
+      }
+      else{
+        return redirect()->action('UserController@home');
+      }
     }
 }
