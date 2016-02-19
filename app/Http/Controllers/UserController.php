@@ -7,10 +7,11 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-
 use Auth;
 use App\User;
 use App\Order;
+use App\School;
+use App\MealPackage;
 
 class UserController extends Controller
 {
@@ -38,14 +39,30 @@ class UserController extends Controller
 
       if($user['type'] == 1){
         $schools = School::where('status', '=', 1)
-                          ->lists('id', 'name');
+                          ->lists('name', 'id');
 
-        return view('user.order', compact('schools'));
+        return view('user.order', compact('user', 'schools'));
       }
       else{
         return redirect()->action('AdminController@index');
       }
     }
+
+    public function getMealPackage()
+    {
+      $user = Auth::user();
+
+      if($user['type'] == 1) {
+        $mpackage = MealPackage::where('status', '=', 1)
+                                ->lists('name', 'id');
+
+        return view('user.order', compact('user', 'mpackage'));
+      }
+      else {
+        return redirect()->action('AdminController@index');
+      }
+    }
+
     public function addOrder()
     {
 

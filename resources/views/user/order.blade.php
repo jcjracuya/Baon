@@ -18,21 +18,17 @@
                         'action' => array('UserController@addOrder'),
                         'class' => 'form')) !!}
           <label><b>Name of Child</b></label>
-          {!! Form::text('childname', '', array('class'=>'form-control')) !!}
+          {!! Form::text('childname', null, array('class'=>'form-control', 'placeholder'=>'Last Name, First Name M.I.')) !!}
           <br/>
 
           <label><b>School</b></label>
           <br/>
-          {!! Form::select('school', $schools, null, array('class'=>'form-control select select-default')) !!}
-
+          <div class="form-group">
+          </div>
           <label><b>Meal Package</b></label>
           <br/>
           <div class="form-group">
-            <select data-toggle="select" class="form-control select select-default">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-            </select>
+            {!! Form::select('mpackage', $mpackage, null, array('class'=>'form-control select select-default')) !!}
           </div>
 
           <label><b>Start Date</b></label>

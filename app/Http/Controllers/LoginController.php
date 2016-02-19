@@ -20,7 +20,6 @@ class LoginController extends Controller
 
     if(!Auth::check())
     {
-        echo "Hi";
         if (Auth::attempt(['email' => $request['email'], 'password' => $request['password'], 'status' => 1]))
         {
           $user = User::where('email', $request['email'])->first();
