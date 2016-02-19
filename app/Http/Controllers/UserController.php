@@ -17,7 +17,7 @@ class UserController extends Controller
     public function home()
     {
       $user = Auth::user();
-
+      // dd($user);
       if($user['type'] == 1){
         return view('user.home');
       }
@@ -32,6 +32,20 @@ class UserController extends Controller
       return view('user.order');
     }
 
+    public function getSchools()
+    {
+      $user = Auth::user();
+
+      if($user['type'] == 1){
+        $schools = School::where('status', '=', 1)
+                          ->lists('id', 'name');
+
+        return view('user.order', compact('schools'));
+      }
+      else{
+        return redirect()->action('AdminController@index');
+      }
+    }
     public function addOrder()
     {
 

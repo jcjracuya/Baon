@@ -20,6 +20,11 @@
           <label><b>Name of Child</b></label>
           {!! Form::text('childname', '', array('class'=>'form-control')) !!}
           <br/>
+
+          <label><b>School</b></label>
+          <br/>
+          {!! Form::select('school', $schools, null, array('class'=>'form-control select select-default')) !!}
+
           <label><b>Meal Package</b></label>
           <br/>
           <div class="form-group">

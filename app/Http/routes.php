@@ -29,9 +29,11 @@ Route::get('/admin/mealpackage/edit/{id?}', 'AdminController@editMP');
 Route::post('/admin/mealpackage/edit/{id?}', 'AdminController@updateMP');
 Route::get('/admin/mealpackage/delete/{id?}', 'AdminController@deleteMP');
 
-Route::get('user/home', 'UserController@home');
-Route::get('user/order', 'UserController@order');
-Route::post('user/order/add', 'UserController@addOrder');
+
+
+
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -50,6 +52,12 @@ Route::group(['middleware' => ['web']], function () {
 
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
-
+    Route::post('/login', 'LoginController@login');
     Route::get('/home', 'HomeController@index');
+
+    Route::get('user/home', 'UserController@home');
+    Route::get('user/order', 'UserController@order');
+    Route::get('user/order', 'UserController@getSchools');
+    Route::post('user/order/add', 'UserController@addOrder');
+
 });
