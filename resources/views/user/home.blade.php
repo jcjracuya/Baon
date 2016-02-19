@@ -31,7 +31,7 @@
       <div class="row">
         <div class="col-md-4">
           <div class="tile">
-            <img src="{{ URL::asset('flatui/img/icons/svg/loop.svg') }}" alt="Compas" class="tile-image big-illustration">
+            <img src="{{ URL::asset('flatui/img/icons/icon1.png') }}" class="tile-image big-illustration">
             <h3 class="tile-title">Package 1</h3>
             <p>Silog</p>
             <a class="btn btn-primary btn-large btn-block" href="#">Details</a>
@@ -40,7 +40,7 @@
 
         <div class="col-md-4">
           <div class="tile">
-            <img src="{{ URL::asset('flatui/img/icons/svg/loop.svg') }}" alt="Infinity-Loop" class="tile-image">
+            <img src="{{ URL::asset('flatui/img/icons/icon2.png') }}" class="tile-image big-illustration">
             <h3 class="tile-title">Package 2</h3>
             <p>Healthy and Yummy</p>
             <a class="btn btn-primary btn-large btn-block" href="#">Details</a>
@@ -49,7 +49,7 @@
 
         <div class="col-md-4">
           <div class="tile">
-            <img src="{{ URL::asset('flatui/img/icons/svg/loop.svg') }}" alt="Pensils" class="tile-image">
+            <img src="{{ URL::asset('flatui/img/icons/icon3.png') }}" class="tile-image big-illustration">
             <h3 class="tile-title">Package 3</h3>
             <p>Go, Grow, & Glow</p>
             <a class="btn btn-primary btn-large btn-block" href="#">Details</a>

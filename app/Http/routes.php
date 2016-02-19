@@ -26,6 +26,7 @@ Route::get('/admin/mealpackage/add', 'AdminController@addMP');
 
 Route::get('user/home', 'UserController@home');
 Route::get('user/order', 'UserController@order');
+Route::post('user/order/add', 'UserController@addOrder');
 
 /*
 |--------------------------------------------------------------------------

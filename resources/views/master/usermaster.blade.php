@@ -55,11 +55,11 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="{{ URL::to('user/home')}}">Home</a></li>
+            <li><a href="{!! action('UserController@home') !!}">Home</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Order <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="{{ URL::to('user/order') }}">Add Order</a></li>
+                <li><a href="{!! action('UserController@order') !!}">Add Order</a></li>
                 <li><a href="#">View Orders</a></li>
               </ul>
             </li>
@@ -74,6 +74,11 @@
     <!-- </div> -->
 
     <br><br><br>
+    <script>
+    $(document).ready(function() {
+      $('#summernote').summernote();
+    });
+    </script>
 
     <script src="{{ URL::asset('flatui/dist/js/vendor/jquery.min.js') }}"></script>
     <script src="{{ URL::asset('flatui/dist/js/vendor/video.js') }}"></script>
