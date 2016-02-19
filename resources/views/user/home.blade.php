@@ -14,7 +14,7 @@
         </div>
         <div class="col-md-6 col-md-offset-3">
           <div class="button-order">
-            <a class="btn btn-primary btn-large btn-block btn-order" href="{!! 'UserController@order' !!}">Place Order</a>
+            <a class="btn btn-primary btn-large btn-block btn-order" href="{!! action('UserController@order') !!}">Place Order</a>
           </div>
         </div>
       </div>

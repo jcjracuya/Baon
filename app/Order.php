@@ -21,4 +21,9 @@ class Order extends Model
   protected $fillable = [
       'userid', 'mpid', 'schoolid', 'childname', 'startdate', 'prepayment', 'postpayment', 'status',
   ];
+
+  public function mealpackages()
+  {
+      return $this->hasOne('App\MealPackage', 'id');
+  }
 }

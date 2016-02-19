@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Http\Requests\AddOrderRequest;
 use App\Http\Controllers\Controller;
 
 use Auth;
@@ -30,41 +31,53 @@ class UserController extends Controller
 
     public function order()
     {
-      return view('user.order');
-    }
-
-    public function getSchools()
-    {
       $user = Auth::user();
 
       if($user['type'] == 1){
         $school = School::where('status', '=', 1)
                           ->lists('name', 'id');
 
-        return view('user.order', compact('user', 'school'));
+        $mpackage = MealPackage::where('status', '=', 1)
+                                ->lists('name', 'id');
+        return view('user.order', compact('user', 'school', 'mpackage'));
       }
       else{
         return redirect()->action('AdminController@index');
       }
     }
 
-    public function getMealPackage()
+    public function addOrder(AddOrderRequest $request)
     {
       $user = Auth::user();
 
-      if($user['type'] == 1) {
-        $mpackage = MealPackage::where('status', '=', 1)
-                                ->lists('name', 'id');
+      if($user['type'] == 1){
+        $order = Order::create([
+          'userid' => $user['id'],
+          'mpid'   => trim($request->mpackage),
+          'schoolid' => trim($request->school),
+          'childname' => trim($request->childname),
+          'startdate' => trim($request->date),
+          'status' => 1,
+        ]);
 
-        return view('user.order', compact('user', 'mpackage'));
+        return redirect()->action('UserController@viewOrders');
       }
-      else {
+      else{
         return redirect()->action('AdminController@index');
       }
     }
 
-    public function addOrder()
+    public function viewOrders()
     {
+      $user = Auth::user();
 
+      if($user['type'] == 1){
+        $orders = Order::with('mealpackages')->where('userid', '=', $user['id'])->get();
+
+        return view('user.viewOrders', compact('user', 'orders'));
+      }
+      else{
+        return redirect()->action('AdminController@index');
+      }
     }
 }

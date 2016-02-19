@@ -60,7 +60,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Order <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="{!! action('UserController@order') !!}">Add Order</a></li>
-                <li><a href="#">View Orders</a></li>
+                <li><a href="{!! action('UserController@viewOrders') !!}">View Orders</a></li>
               </ul>
             </li>
             <li><a href="{{ URL::to('/logout')}}">Log Out</a></li>

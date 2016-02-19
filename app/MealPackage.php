@@ -29,4 +29,5 @@ class MealPackage extends Model
     protected $hidden = [
 
     ];
+    
 }
