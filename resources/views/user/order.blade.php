@@ -24,6 +24,7 @@
           <label><b>School</b></label>
           <br/>
           <div class="form-group">
+            {!! Form::select('school', $mpackage, null, array('class'=>'form-control select select-default')) !!}
           </div>
           <label><b>Meal Package</b></label>
           <br/>

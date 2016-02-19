@@ -38,10 +38,10 @@ class UserController extends Controller
       $user = Auth::user();
 
       if($user['type'] == 1){
-        $schools = School::where('status', '=', 1)
+        $school = School::where('status', '=', 1)
                           ->lists('name', 'id');
 
-        return view('user.order', compact('user', 'schools'));
+        return view('user.order', compact('user', 'school'));
       }
       else{
         return redirect()->action('AdminController@index');

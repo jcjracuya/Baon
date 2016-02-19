@@ -19,6 +19,6 @@ class Order extends Model
    * @var array
    */
   protected $fillable = [
-      'userid', 'mpid', 'childname', 'startdate', 'prepayment', 'postpayment', 'status',
+      'userid', 'mpid', 'schoolid', 'childname', 'startdate', 'prepayment', 'postpayment', 'status',
   ];
 }
