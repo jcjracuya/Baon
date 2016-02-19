@@ -26,9 +26,11 @@ Route::post('/admin/school/add', 'AdminController@storeSchool');
 Route::get('/admin/mealpackage/add', 'AdminController@addMP');
 Route::post('/admin/mealpackage/add', 'AdminController@storeMP');
 
-Route::get('user/home', 'UserController@home');
-Route::get('user/order', 'UserController@order');
-Route::post('user/order/add', 'UserController@addOrder');
+
+
+
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -47,6 +49,12 @@ Route::group(['middleware' => ['web']], function () {
 
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
-
+    Route::post('/login', 'LoginController@login');
     Route::get('/home', 'HomeController@index');
+
+    Route::get('user/home', 'UserController@home');
+    Route::get('user/order', 'UserController@order');
+    Route::get('user/order', 'UserController@getSchools');
+    Route::post('user/order/add', 'UserController@addOrder');
+
 });

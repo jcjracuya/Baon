@@ -51,7 +51,7 @@
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
           </button>
-          <a class="navbar-brand" href="{{ URL::to('user/home')}}">Baon</a>
+          <a class="navbar-brand" href="{!! action('UserController@home') !!}">Baon</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
