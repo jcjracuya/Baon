@@ -16,7 +16,7 @@ class Orders extends Migration
             $table->increments('id');
             $table->integer('userid');
             $table->integer('mpid');
-            $table->integer('childid');
+            $table->string('childname');
             $table->date('startdate');
             $table->tinyInteger('prepayment');
             $table->tinyInteger('postpayment');

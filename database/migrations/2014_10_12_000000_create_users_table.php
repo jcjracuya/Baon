@@ -17,7 +17,9 @@ class CreateUsersTable extends Migration
             $table->string('lname', 255);
             $table->string('fname', 255);
             $table->string('addr', 255);
+            $table->string('username', 255);
             $table->string('contactno', 255);
+            $table->tinyInteger('type');
             $table->tinyInteger('status');
 
             $table->string('email')->unique();
