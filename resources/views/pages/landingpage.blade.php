@@ -120,7 +120,7 @@
        <div class="col-sm-4 wow fadeInDown text-center">
          <img  class="rotate" src="{{URL::asset('flatfy/img/icon/map.svg') }}" alt="Generic placeholder image">
           <h3>Delivery</h3>
-         <p class="lead">On time delivery to affiliated schools. You can trust us to deliver the meals in time for lunch.</p>
+         <p class="lead">On time delivery to affiliated schools. You can trust us to deliver the meals on time for lunch.</p>
          <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
        </div><!-- /.col-lg-4 -->
 
