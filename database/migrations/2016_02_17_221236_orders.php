@@ -19,6 +19,8 @@ class Orders extends Migration
             $table->integer('schoolid');
             $table->string('childname');
             $table->date('startdate');
+            $table->tinyInteger('prepayment');
+            $table->tinyInteger('postpayment');
             $table->tinyInteger('status');
 
             $table->timestamps();

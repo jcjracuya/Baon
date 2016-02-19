@@ -49,14 +49,13 @@ class UserController extends Controller
     public function addOrder(AddOrderRequest $request)
     {
       $user = Auth::user();
-
       if($user['type'] == 1){
         $order = Order::create([
           'userid' => $user['id'],
-          'mpid'   => trim($request->mpackage),
+          'mpid'   => $request->mpackage,
           'schoolid' => trim($request->school),
           'childname' => trim($request->childname),
-          'startdate' => trim($request->date),
+          'startdate' => $request->startdate,
           'status' => 1,
         ]);
 

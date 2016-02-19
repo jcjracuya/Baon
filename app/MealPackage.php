@@ -29,5 +29,9 @@ class MealPackage extends Model
     protected $hidden = [
 
     ];
-    
+
+    public function orders()
+    {
+      return $this->belongsTo('App\Order', 'id');
+    }
 }
