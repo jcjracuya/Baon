@@ -31,6 +31,7 @@ Route::get('/admin/mealpackage/delete/{id?}', 'AdminController@deleteMP');
 
 Route::get('user/home', 'UserController@home');
 Route::get('user/order', 'UserController@order');
+Route::post('user/order/add', 'UserController@addOrder');
 
 /*
 |--------------------------------------------------------------------------
