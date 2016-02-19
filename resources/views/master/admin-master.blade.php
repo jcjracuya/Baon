@@ -51,7 +51,7 @@
               </ul>
             </li>
 
-            <li><a href="../navbar/">Log Out</a></li>
+            <li><a href="{{ URL::to('/logout')}}">Log Out</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -64,7 +64,7 @@
 
     </div> <!-- /container -->
 
-    
+
 
     <script src="{{ URL::asset('flatui/dist/js/vendor/jquery.min.js') }}"></script>
     <script src="{{ URL::asset('flatui/dist/js/vendor/video.js') }}"></script>

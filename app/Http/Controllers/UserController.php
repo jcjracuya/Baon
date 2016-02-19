@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+
+use Auth;
 use App\User;
 use App\Order;
 
@@ -14,7 +16,15 @@ class UserController extends Controller
 {
     public function home()
     {
-      return view('user.home');
+      $user = Auth::user();
+
+      if($user['type'] == 1){
+        return view('user.home');
+      }
+      else{
+        return redirect()->action('AdminController@index');
+      }
+
     }
 
     public function order()

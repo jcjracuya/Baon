@@ -8,32 +8,32 @@
 
 
 	      {{ Form::open(array(
-	                'action' => 'AdminAuthController@adminRegister',
+	                'action' => 'AdminController@storeSchool',
 	                'class' => 'form')) }}
 
 	      <div class="form-group">
 	        {!! Form::text('name', null,
 	                      array('required',
 	                      'class'=>'form-control',
-	                      'placeholder'=>'School')) !!}      
-	        <br/>              
+	                      'placeholder'=>'School')) !!}
+	        <br/>
 	        {!! Form::text('addr', null,
 	                      array('required',
 	                      'class'=>'form-control',
-	                      'placeholder'=>'Address')) !!}     
+	                      'placeholder'=>'Address')) !!}
 
-	        <br/>              
+	        <br/>
 	        {!! Form::text('contactno', null,
 	                      array('required',
 	                      'class'=>'form-control',
-	                      'placeholder'=>'Contact No')) !!}    
+	                      'placeholder'=>'Contact No')) !!}
 
-	        <br/>              
+	        <br/>
 
-	        <input type="submit" class="btn btn-block btn-primary btn-wide" value="Submit" />              
+	        <input type="submit" class="btn btn-block btn-primary btn-wide" value="Submit" />
 	      {{ Form::close() }}
 
-	      </div>            
+	      </div>
 	    </div>
 	  </div>
 @endsection
