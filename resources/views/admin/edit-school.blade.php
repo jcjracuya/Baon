@@ -1,33 +1,32 @@
 @extends('master.admin-master')
-@section('title', 'Add Meal Package')
+@section('title', 'Edit School')
 @section('content')
 	<div class="container-fluid">
 	  <div class="row">
-	    <div class="col-sm-6 col-sm-offset-3">
-	      <h3>Add Meal Package</h3>
+	    <div class="col-sm-4 col-sm-offset-4">
+	      <h3>Edit School</h3>
 
 
 	      {{ Form::open(array(
-	                'action' => 'AdminController@storeMP',
+	                'action' => array('AdminController@updateSchool', $school->id),
 	                'class' => 'form')) }}
 
 	      <div class="form-group">
-	        {!! Form::text('name', null,
+	        {!! Form::text('name', $school->name,
 	                      array('required',
 	                      'class'=>'form-control',
-	                      'placeholder'=>'Meal Package Title')) !!}
+	                      'placeholder'=>'School')) !!}
 	        <br/>
-
-	        {!! Form::textarea('details', null,
+	        {!! Form::text('addr', $school->addr,
 	                      array('required',
 	                      'class'=>'form-control',
-	                      'placeholder'=>'Details')) !!}
+	                      'placeholder'=>'Address')) !!}
 
 	        <br/>
-	        {!! Form::number('price', null,
+	        {!! Form::text('contactno', $school->contactno,
 	                      array('required',
 	                      'class'=>'form-control',
-	                      'placeholder'=>'Price')) !!}
+	                      'placeholder'=>'Contact No')) !!}
 
 	        <br/>
 

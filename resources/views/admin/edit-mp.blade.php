@@ -8,23 +8,23 @@
 
 
 	      {{ Form::open(array(
-	                'action' => 'AdminController@storeMP',
+	                'action' => array('AdminController@updateMP', $mp->id),
 	                'class' => 'form')) }}
 
 	      <div class="form-group">
-	        {!! Form::text('name', null,
+	        {!! Form::text('name', $mp->name,
 	                      array('required',
 	                      'class'=>'form-control',
 	                      'placeholder'=>'Meal Package Title')) !!}
 	        <br/>
 
-	        {!! Form::textarea('details', null,
+	        {!! Form::textarea('details', $mp->details,
 	                      array('required',
 	                      'class'=>'form-control',
 	                      'placeholder'=>'Details')) !!}
 
 	        <br/>
-	        {!! Form::number('price', null,
+	        {!! Form::number('price', $mp->price,
 	                      array('required',
 	                      'class'=>'form-control',
 	                      'placeholder'=>'Price')) !!}

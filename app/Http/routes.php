@@ -13,18 +13,21 @@
 
 Route::get('/', 'PagesController@landingpage');
 Route::get('/test', 'PagesController@test');
-Route::get('/adminlogin', 'PagesController@adminlogin');
-Route::post('/adminlogin', 'AdminAuthController@adminLogin');
-Route::get('/adminsignup', 'PagesController@adminsignup');
-Route::post('/adminsignup', 'AdminAuthController@adminRegister');
-Route::get('/editor', 'PagesController@editor');
-Route::get('/admin/home', 'AdminController@index');
-Route::get('/admin/schools', 'AdminController@viewSchools');
-Route::get('/admin/mealpackages', 'AdminController@viewMP');
-Route::get('/admin/school/add', 'AdminController@addSchool');
-Route::post('/admin/school/add', 'AdminController@storeSchool');
-Route::get('/admin/mealpackage/add', 'AdminController@addMP');
-Route::post('/admin/mealpackage/add', 'AdminController@storeMP');
+// Route::get('/adminlogin', 'PagesController@adminlogin');
+// Route::post('/adminlogin', 'AdminAuthController@adminLogin');
+// Route::get('/adminsignup', 'PagesController@adminsignup');
+// Route::post('/adminsignup', 'AdminAuthController@adminRegister');
+// Route::get('/editor', 'PagesController@editor');
+// Route::get('/admin/home', 'AdminController@index');
+// Route::get('/admin/schools', 'AdminController@viewSchools');
+// Route::get('/admin/mealpackages', 'AdminController@viewMP');
+// Route::get('/admin/school/add', 'AdminController@addSchool');
+// Route::post('/admin/school/add', 'AdminController@storeSchool');
+// Route::get('/admin/mealpackage/add', 'AdminController@addMP');
+// Route::post('/admin/mealpackage/add', 'AdminController@storeMP');
+// Route::get('/admin/mealpackage/edit/{id?}', 'AdminController@editMP');
+// Route::post('/admin/mealpackage/edit/{id?}', 'AdminController@updateMP');
+// Route::get('/admin/mealpackage/delete/{id?}', 'AdminController@deleteMP');
 
 
 
@@ -57,5 +60,19 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('user/order', 'UserController@getSchools');
     Route::get('user/order', 'UserController@getMealPackage');
     Route::post('user/order/add', 'UserController@addOrder');
+
+    Route::get('/admin/home', 'AdminController@index');
+    Route::get('/admin/schools', 'AdminController@viewSchools');
+    Route::get('/admin/mealpackages', 'AdminController@viewMP');
+    Route::get('/admin/school/add', 'AdminController@addSchool');
+    Route::post('/admin/school/add', 'AdminController@storeSchool');
+    Route::get('/admin/mealpackage/add', 'AdminController@addMP');
+    Route::post('/admin/mealpackage/add', 'AdminController@storeMP');
+    Route::get('/admin/mealpackage/edit/{id?}', 'AdminController@editMP');
+    Route::post('/admin/mealpackage/edit/{id?}', 'AdminController@updateMP');
+    Route::get('/admin/mealpackage/delete/{id?}', 'AdminController@deleteMP');
+    Route::get('/admin/school/edit/{id?}', 'AdminController@editSchool');
+    Route::post('/admin/school/edit/{id?}', 'AdminController@updateSchool');
+    Route::get('/admin/school/delete/{id?}', 'AdminController@deleteSchool');
 
 });

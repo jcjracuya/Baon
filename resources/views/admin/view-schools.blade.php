@@ -22,9 +22,9 @@
 					<td>{{ $s->status == 1 ? 'Active' : 'Inactive' }}</td>
 					<td>
 									<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-									<button type="button" class="btn btn-primary">Edit</button>
+									<a href="{{ action('AdminController@editSchool', $s->id) }}" class="btn btn-primary">Edit</a>
 									<!-- Standard gray button with gradient -->
-									<button type="button" class="btn btn-default">Delete</button>
+									<a href="{{ action('AdminController@deleteSchool', $s->id) }}" class="btn btn-default">Delete</a>
 					</td>
 				</tr>
 
